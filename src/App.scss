@@ -7,11 +7,20 @@
   padding: 0;
 }
 
+.container {
+  width: 599px;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .body {
   flex: 1;
   width: 100%;
   height: 100%;
-  min-height: 100vh;
+  min-height: calc(100vh - 56px);
   background-color: rgba($color: #FE3E3E, $alpha: 0.11);
 }
 
@@ -22,5 +31,103 @@
   font-size: 32px;
   text-transform: uppercase;
   font-weight: bold;
+  margin-bottom: 96px;
   padding: 8px 0px;
+}
+
+.pomodoro__player {
+  position: relative;
+  width: max-content;
+}
+
+.pomodoro__image {
+  width: 286px;
+  height: auto;
+}
+
+.start__button {
+  background-color: unset;
+  border: none;
+  position: absolute;
+  bottom: 18px;
+  left: calc(50% - 82px);
+  .start__icon {
+    font-size: 144px;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+.pomodoro__tracker {
+  font-size: 92px;
+  margin: 62px 0px 0px 42px;
+  color: #872222;
+}
+
+.controll__container {
+  margin-top: 92px;
+  justify-content: space-between;
+  .controll {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .controll__button {
+    background-color: unset;
+    border: none;
+    color: #872222;
+    font-size: 56px;
+    font-weight: bold;
+    width: 34px;
+    cursor: pointer;
+  }
+  .controll__title {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #872222;
+  }
+  .controller {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .controll__value {
+    font-size: 89px;
+    color: #872222;
+    margin: 0px 24px;
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+  background-color: #E7BCBC;
+  width: 100%;
+  .footer__text {
+    font-weight: normal;
+    font-size: 14px;
+    color: #872222;
+    strong {
+      font-weight: 600;
+    }
+  }
+}
+
+@media only screen and (max-width: 659px) {
+  .container {
+    flex-direction: column;
+  }
+  .pomodoro__tracker {
+    margin: 12px 0px 0px 0px !important;
+  }
+  .controll + .controll {
+    margin-top: 32px;
+  }
+
+  .controll__container {
+    padding-bottom: 56px;
+  }
 }
