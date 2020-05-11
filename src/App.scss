@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
-
 * {
   font-family: 'Montserrat', sans-serif;
   box-sizing: border-box;
@@ -62,6 +61,8 @@
   font-size: 92px;
   margin: 62px 0px 0px 42px;
   color: #872222;
+  width: 260px;
+  text-align: left;
 }
 
 .controll__container {
@@ -96,6 +97,8 @@
     font-size: 89px;
     color: #872222;
     margin: 0px 24px;
+    width: 120px;
+    text-align: center;
   }
 }
 
@@ -123,10 +126,9 @@
   .pomodoro__tracker {
     margin: 12px 0px 0px 0px !important;
   }
-  .controll + .controll {
+  .controll+.controll {
     margin-top: 32px;
   }
-
   .controll__container {
     padding-bottom: 56px;
   }
