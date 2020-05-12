@@ -4,7 +4,6 @@ import PlayArrow from '@material-ui/icons/PlayArrow';
 import './App.scss';
 
 class App extends Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -22,9 +21,7 @@ class App extends Component {
 
   startTrack() {
     let state = this.state;
-
     state.actualValueTrack = state.sessionTrack;
-
     state.isActive = true;
 
     let timer = setInterval(() => {
@@ -43,7 +40,7 @@ class App extends Component {
 
   incrementSession() {
     let state = this.state;
-
+    
     if (!state.isActive && state.sessionTrack < 60) {
       state.sessionTrack++;
       state.actualValueTrack = state.sessionTrack;
